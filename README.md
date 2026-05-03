@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Rachio/Flume Irrigation Optimizer
 
-# Run and deploy your AI Studio app
+Welcome to the Rachio/Flume Irrigation Optimizer. This application is a dashboard to aggregate data from Flume and Rachio, calculate flow rates, analyze efficiency, and log manual screwdriver tests for optimal watering. By correlating discrete cycle events from Rachio with minute-by-minute telemetry from Flume, the system can accurately isolate each zone's true Gallons Per Minute (GPM).
 
-This contains everything you need to run your app locally.
+## Live Demo
+Check out the live version of the app here: **[Rachio/Flume Irrigation Optimizer Live App](https://rachio-flume-irrigation-optimizer-1073165315355.us-west1.run.app)**
 
-View your app in AI Studio: https://ai.studio/apps/f3efaa8d-990c-4928-afad-3ed2ce699ce6
+## Features
+- **Data Correlation**: Matches Rachio cycle and soak events precisely to Flume minute-by-minute flow data.
+- **Efficiency Analysis**: Calculates true GPM (gallons per minute) to help spot leaks, oversized nozzles, or dry spots.
+- **AI-Powered Insights**: Generates actionable lawn care and irrigation insights by combining weekly/monthly water usage with physical "screwdriver test" records.
+- **Screwdriver Test Logging**: A dedicated interface to record manual moisture and soil depth findings for each zone.
 
-## Run Locally
+## Running Locally
 
-**Prerequisites:**  Node.js
+To run this project locally on your machine:
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Clone the repository.
+2. Install the necessary dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up your environment variables by copying `.env.example` to `.env` and providing the required strings (you will need a Gemini API key for the insights generation to work).
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Navigate to `http://localhost:3000` to view the app. You can then configure your Rachio and Flume API credentials securely via the settings menu in the UI.
