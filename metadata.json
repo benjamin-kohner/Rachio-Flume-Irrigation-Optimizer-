@@ -1,0 +1,5 @@
+{
+  "name": "Rachio/Flume Irrigation Optimizer",
+  "description": "A dashboard to aggregate data from Flume and Rachio, calculate flow rates, analyze efficiency, and log screwdriver tests for optimal watering.",
+  "requestFramePermissions": []
+}
